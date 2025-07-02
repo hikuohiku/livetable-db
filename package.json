@@ -13,6 +13,7 @@
     "format": "prisma format",
     "docker:up": "cd docker && docker compose up -d",
     "docker:down": "cd docker && docker compose down",
+    "docker:reset": "cd docker && docker compose down -v",
     "docker:logs": "cd docker && docker compose logs -f"
   },
   "author": "Hiroki Ando",
