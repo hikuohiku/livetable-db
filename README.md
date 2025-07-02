@@ -5,6 +5,7 @@
 ## Overview
 
 LiveTableはMySQL + Prisma ORMを使用してデータベースを管理しています。このリポジトリは以下の要素の中央管理を行います：
+
 - データベーススキーマ定義
 - マイグレーションスクリプト
 - データベースドキュメント
@@ -45,6 +46,7 @@ Channel (1) ←→ (n) Video
 ## Usage
 
 ### Prerequisites
+
 - Node.js 18+
 - MySQL 8.0+
 - pnpm
@@ -52,6 +54,7 @@ Channel (1) ←→ (n) Video
 ### Setup
 
 #### Option 1: Docker使用（推奨）
+
 ```bash
 # Dockerでデータベースを起動
 cd docker
@@ -72,6 +75,7 @@ pnpm run seed
 ```
 
 #### Option 2: ローカルMySQL使用
+
 ```bash
 # 依存関係をインストール
 pnpm install
@@ -90,12 +94,14 @@ pnpm run seed
 ### Development Workflow
 
 #### スキーマ変更を行う場合
+
 1. `prisma/schema.prisma`を更新
 2. マイグレーション生成: `pnpm run migrate:dev --name 変更内容の説明`
 3. 開発用データベースでマイグレーションをテスト
 4. スキーマとマイグレーションファイルをコミット
 
 #### 本番デプロイ
+
 ```bash
 # 本番環境にマイグレーションをデプロイ
 pnpm run migrate:deploy
@@ -117,12 +123,15 @@ pnpm run generate
 ## Integration
 
 ### Backend API Server
+
 APIサーバーは依存関係またはサブモジュールとしてこのリポジトリを参照し、スキーマの一貫性を保つ必要があります。
 
 ### Frontend
+
 このスキーマからフロントエンド用のTypeScript型を生成し、スタック全体で型安全性を維持できます。
 
 ### CI/CD Integration
+
 - プルリクエストでのスキーマ検証
 - テストデータベースでのマイグレーションテスト
 - 依存リポジトリでの自動クライアント生成
