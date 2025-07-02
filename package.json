@@ -1,0 +1,28 @@
+{
+  "name": "livetable-db",
+  "version": "0.0.0",
+  "description": "Database schema and migrations for LiveTable application",
+  "main": "prisma/schema.prisma",
+  "scripts": {
+    "migrate": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:reset": "prisma migrate reset",
+    "generate": "prisma generate",
+    "studio": "prisma studio",
+    "validate": "prisma validate",
+    "format": "prisma format",
+    "docker:up": "cd docker && docker compose up -d",
+    "docker:down": "cd docker && docker compose down",
+    "docker:logs": "cd docker && docker compose logs -f"
+  },
+  "author": "Hiroki Ando",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hikuohiku/livetable-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hikuohiku/livetable-db/issues"
+  },
+  "homepage": "https://github.com/hikuohiku/livetable-db#readme"
+}
