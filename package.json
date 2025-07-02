@@ -11,6 +11,7 @@
     "studio": "prisma studio",
     "validate": "prisma validate",
     "format": "prisma format",
+    "seed": "node scripts/seed.js",
     "docker:up": "cd docker && docker compose up -d",
     "docker:down": "cd docker && docker compose down",
     "docker:reset": "cd docker && docker compose down -v",
